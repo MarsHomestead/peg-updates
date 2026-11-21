@@ -1,7 +1,16 @@
 {
   "bot": "Small Business Bookkeeper (Peg)",
-  "latest": "1.0",
+  "latest": "1.1",
   "updates": [
+    {
+      "version": "1.1",
+      "date": "2026-11-20",
+      "title": "Lesson inbox address added",
+      "summary": "Copies that opted in to sharing lessons now have an address to send them to, only after the owner's yes each week.",
+      "changes": [
+        "Added the intake address and lesson format to this page."
+      ]
+    },
     {
       "version": "1.0",
       "date": "2026-11-19",
@@ -9,5 +18,13 @@
       "summary": "Copies now check this page weekly for improvements.",
       "changes": []
     }
-  ]
+  ],
+  "intake": {
+    "lessons_url": "https://peg-hive-intake.marshomestead.workers.dev/",
+    "feedback_url": "https://peg-hive-intake.marshomestead.workers.dev/feedback",
+    "send_only_with_owner_yes": true,
+    "lesson_batch": "POST JSON {\"batch\":[...1-20 lines]}. Each line has exactly: v=2, b=\"pg\", k (lesson|correction|request|declined|broken|workaround), t (topic), w (what happened), r (what works) each 1-150 chars, n=1, tv (template version like \"9.0\"), rid (16 hex random install id kept in memory), h (first 12 hex of sha256 of k|t|w|r), wk (ISO week like 2026-W47).",
+    "feedback": "POST JSON {v:2, b:\"pg\", kind (bug|request|praise|other), text (1-500 chars), tv, rid}.",
+    "privacy": "Text with emails, phone numbers, links, card numbers, passwords, tokens or handles is refused. Send general tips only, never personal, client or account data."
+  }
 }
