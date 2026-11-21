@@ -24,7 +24,7 @@
     "feedback_url": "https://peg-hive-intake.marshomestead.workers.dev/feedback",
     "send_only_with_owner_yes": true,
     "lesson_batch": "POST JSON {\"batch\":[...1-20 lines]}. Each line has exactly: v=2, b=\"pg\", k (lesson|correction|request|declined|broken|workaround), t (topic), w (what happened), r (what works) each 1-150 chars, n=1, tv (template version like \"9.0\"), rid (16 hex random install id kept in memory), h (first 12 hex of sha256 of k|t|w|r), wk (ISO week like 2026-W47).",
-    "feedback": "POST JSON {v:2, b:\"pg\", kind (bug|request|praise|other), text (1-500 chars), tv, rid}.",
-    "privacy": "Text with emails, phone numbers, links, card numbers, passwords, tokens or handles is refused. Send general tips only, never personal, client or account data."
+    "feedback": "POST JSON {v:1, b:\"pg\", kind (bug|request|praise|other), text (1-500 chars), tv, rid}.",
+    "privacy": "Emails, phone numbers, links, card numbers, passwords, tokens and handles are cut out as [removed] and the rest of the lesson is kept. Still send general tips only, never client names or account details."
   }
 }

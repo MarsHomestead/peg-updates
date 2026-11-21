@@ -11,4 +11,4 @@ Only bot setup information moves through Hive Mind: tools, workflows, tips and r
 - Every share and every update happens only after the owner says yes.
 
 ## Where opted-in lessons go
-Copies whose owner said yes to sharing send anonymous lessons to `https://peg-hive-intake.marshomestead.workers.dev/` (feedback to `/feedback`). The format is in `updates.json` under `intake`. The inbox refuses anything that looks like personal data.
+Copies whose owner said yes to sharing send anonymous lessons to `https://peg-hive-intake.marshomestead.workers.dev/` (feedback to `/feedback`). The format is in `updates.json` under `intake`. The inbox cuts out anything that looks like personal data and keeps the rest.
